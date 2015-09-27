@@ -1,10 +1,10 @@
-#In a manner similar to the cachemean example, we write the code to cache the matrix and its' inverse.
-#Then we use the CacheSolve Function to calculate the inverse.
+#In a manner similar to the cachemean example, we write a function to cache the matrix and its' inverse.
+#Then we write a function to calculate the inverse of a matrix.
 
 #First we make sure that the function takes in a matrix variable x. 
 #We sent inverse variable i to NULL. 
-#We set the value "set" to make x take the value of y and i to be null. 
 
+#We set the value "set" as a function in which x takes on the value of y and we reset i to be null. 
 makeCacheMatrix <- function(x = matrix()) {
 
 i <- NULL
@@ -30,11 +30,10 @@ i <- NULL
     getinverse = getinverse)
 }
 
-#Similarly, we write a function to return the cached value (if any) of the inverse. 
-#Else, we calculate it manually.
+#Similarly, we write a function to return the cached value (if any) of the inverse based on the makeCacheMatrix Formula. 
 cacheSolve <- function(x, ...) {
   
-  #We define the inverse variable i as the inverse that is generated in the MakeCacheMatrix function. 
+  #We define the inverse variable i as the inverse value that is generated in the MakeCacheMatrix function. 
   #If the cache not empty, the function will return the inverse.
   i <- x$getinverse()
   if(!is.null(i)) {
